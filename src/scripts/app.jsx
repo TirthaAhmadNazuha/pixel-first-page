@@ -1,5 +1,6 @@
 import { BaseComponent } from 'amber';
 import '../styles/index.sass';
+import bgImg from '../images/learn2-pixel.jpg';
 import SearchBox from './component/search-box';
 
 const App = class extends BaseComponent {
@@ -21,7 +22,7 @@ const App = class extends BaseComponent {
           </main>
         </div>
         <div className="bg">
-          <img src="./learn2-pixel.jpg" alt="" />
+          <img src={bgImg} alt="" />
         </div>
       </div >
     );
@@ -56,7 +57,7 @@ const App = class extends BaseComponent {
                 span.style.width = w;
               }, 200);
             }, time);
-            time += 200;
+            time += 360;
           });
         });
       });

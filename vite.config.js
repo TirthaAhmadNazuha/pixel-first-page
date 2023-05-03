@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 
 export default defineConfig({
   build: {
@@ -10,4 +10,5 @@ export default defineConfig({
     jsxImportSource: 'amber',
     jsxInject: "import { AmberJsx } from 'amber';\n",
   },
+  plugins: [splitVendorChunkPlugin()]
 });
