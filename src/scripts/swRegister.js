@@ -1,5 +1,3 @@
-import swUrl from './sw?worker&url';
-
 const swRegister = async () => {
   if (!('serviceWorker' in navigator)) {
     console.log('Service Worker not supported in the browser');
@@ -7,7 +5,7 @@ const swRegister = async () => {
   }
 
   try {
-    navigator.serviceWorker.register(swUrl, {
+    navigator.serviceWorker.register('./sw.js', {
       type: 'module',
     });
     console.log('Service worker registered');
